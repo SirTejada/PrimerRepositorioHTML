@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript" src ="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.5.js"></script> <!-- Esto importa la libreria de JQuery-->
+    <script type = "text/JavaScript">
+        function alerta()
+        {
+            alert("AlertaUno");
+            console.log("Alertaaa");
+        }
+        function esconder()
+        {
+            var texto = document.getElementById("toHide");
+            if ($(texto).checkVisibility)
+            {
+                $(texto).show();
+            }
+            else{
+                $(texto).hide();
+            }
+        }
+        function calculo()
+        {
+            var numero1 = document.getElementById("numero1").value;
+            var numero2 = document.getElementById("numero2").value;
+            var total = +numero1 + +numero2;
+            var totalfinal = document.getElementById("total");
+            totalfinal.innerHTML = total;
+        }
+        function newFrase()
+        {
+            var original = document.getElementById("original");
+            var nuevo_parrafo = document.createElement("p");
+            var este_texto = "Esta frase es nueva!";
+            var nuevo_contenido = document.createTextNode(este_texto);
+            nuevo_parrafo.appendChild(nuevo_contenido);
+            document.body.insertBefore(nuevo_parrafo,original);
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="press Me" id="Alerta" onclick="alerta();">
+
+    <p>
+    <label for="text" id="toHide">Hola, soy un contenido visible</label>
+    <input type="button" value="Presioname para hacer desaparecer lo de arriba" onclick="esconder();">
+    </p>
+
+    <p>
+        <input type="number" id="numero1">  <input type="number" id="numero2">
+        <input type="button" value="suma" onclick="calculo();">
+        <span id = "total"></span>
+    </p>
+    <input type="button" value="nuevaFrase" onclick="newFrase();">
+    <p id="original">
+        Texto number one que sale.
+
+    </p>
+    
+</body>
+</html>

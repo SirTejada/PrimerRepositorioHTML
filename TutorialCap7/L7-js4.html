@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primero uso de JQuery</title>
+    <script type="text/JavaScript" src ="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.5.js"></script> <!-- Esto importa la libreria de JQuery-->
+    <script type = "text/JavaScript">
+        // Una vez que el HTML se carga, se ejecuta
+        // la función ready().
+        $(document).ready(function()
+        {
+            // Cada párrafo tiene una acción clic
+            // que oculta la frase en particular
+            $("p").click(function()
+            {
+                $(this).hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>Primera frase, hazme clic para hacerme desaparecer.
+        <p>Esto es la segunda frase.
+            <p>Esto es la tercera frase.
+</body>
+</html>

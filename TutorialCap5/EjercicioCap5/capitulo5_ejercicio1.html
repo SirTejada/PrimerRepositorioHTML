@@ -1,0 +1,64 @@
+<!-- Ejercicio 1. -->
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Ejercicio tema 5</title>
+    <style>
+        div {
+            display: flex;
+            /*
+            flex-direction: row-reverse;
+            flex-wrap: nowrap;
+            */
+            flex-flow: nowrap, row-reverse;
+            flex-flow: row-reverse;
+            height: 200px;
+            padding: 1em;
+            color: white;
+            outline: 2px solid silver;
+            grid-column: 150px auto 2fr;
+            grid-row: 50px 6em auto;
+            }
+        div>div {
+            width: 75px;
+            margin: 1em;
+            height: 100px;
+            background-color: #b200ff;
+            font-family: sans-serif;
+            text-align: center;
+            line-height: 100px;
+            font-size: xx-large;
+            }
+            #perro{
+                background-color: red;
+                grid-row: 1;
+                grid-column: 1;
+            }
+            #gato{
+                background-color: blue;
+                grid-row: 2;
+                grid-column: 2;
+            }
+            #loro{
+                background-color: green;
+                grid-row: 3;
+                grid-column: 3;
+            }
+            #conejo{
+                background-color: pink;
+                grid-row: 4;
+                grid-column: 4;
+            }
+        </style>
+</head>
+<body>
+    <div>
+        <div id="perro">Perro</div>
+        <div id="gato">Gato</div>
+        <div id="loro">Loro</div>
+		<div id="conejo">Conejo</div>
+    </div>
+</body>
+</html>
